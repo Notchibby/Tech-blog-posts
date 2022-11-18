@@ -19,9 +19,6 @@ header {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  
-  
-  
 }
 
 nav {
@@ -97,7 +94,7 @@ h2 {
   background-color: #b7b3af;
 }
 
-#button:hover {
+.button:hover {
   background-color:#4f5754;
   cursor: pointer;
 }
@@ -110,6 +107,102 @@ h2 {
 #signup-link:hover {
   color: #5151df;
 }
+
+.blog-card {
+  width: 95%;
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border: 1.5px solid #020202;
+  box-sizing: content-box;
+}
+
+.card-title {
+  background-color: #282d2b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.title-content {
+  color: #d2f3ca;
+  padding: 0%;
+  margin: 1.5%;
+}
+
+#title-content {
+  font-weight: 700;
+  font-size: larger;
+}
+
+p {
+  padding: 1.5%;
+}
+
+.comment-form{
+  margin-bottom: 1%;
+  padding: 2%;
+  background-color: #282d2b;
+}
+
+.myblog-post{
+  box-sizing: content-box;
+  border: 1.5px solid #6a7671;
+  width: 95%;
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #6a7671;
+  border-radius: 10px;
+}
+
+.myblog-post-content{
+  color: #d2f3ca;
+}
+
+#myblog-post-content{
+  padding: 1.5%;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+.new-post-button{
+  box-sizing: border-box;
+  margin: 20% 40% 0% 45% ;
+  border: 1.5px solid   #282d2b;
+  width: fit-content;
+  padding: 0.5% 1.5% 0.5% 1.5%;
+  background-color: #282d2b;
+  border-radius: 10px;
+  color: #d2f3ca;
+}
+
+.new-post-button:hover{
+  color: #5151df;
+  cursor: pointer;
+  transition: 0.4ms;
+}
+
+#post-title-form{
+  padding-bottom: 0%;
+}
+
+#post-content-form{
+  padding-top: 0%;
+}
+
+#post-content{
+padding-bottom: 3%;
+}
+
 
 
 
