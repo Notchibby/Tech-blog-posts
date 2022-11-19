@@ -36,7 +36,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-    console.log(user)
+    
 
     res.render('dashboard', {
       ...user,
@@ -56,5 +56,10 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+router.get('/signup', (req, res) => {
+
+  res.render('signup');
+})
 
 module.exports = router;
