@@ -205,6 +205,31 @@ main{
 padding-bottom: 3%;
 }
 
+.comment-card {
+  width: 95%;
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border: 1.5px solid #020202;
+  box-sizing: content-box;
+}
+
+.comment-title {
+  background-color:#282d2b ;
+  padding: 2%;
+}
+
+#comment-content {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+#comment-tag {
+  padding-bottom: 3%;
+}
+
 
 
 

@@ -81,5 +81,23 @@ router.get('/update/:id', withAuth , async (req, res) => {
   } 
 })
 
+router.get('/comment/:id', withAuth , async (req, res) => {
+  try {
+    const commentData = await Comment.findByPk(req.params.id, {
+      include: [{ 
+        model: Blog, include: [{model: User}] 
+      },], 
+    })
+    const comment = commentData.get({plain: true})
+    console.log(comment)
+    res.render('viewcomment', {
+      ...comment,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err)
+  } 
+})
+
 
 module.exports = router;
