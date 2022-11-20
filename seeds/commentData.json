@@ -1,21 +1,22 @@
 [
     {
+        "user_id": 4,
         "description": "I just learned this in my class",
-        "date_created": "2022-08-05T16:40:39.266Z",
-        "user_id": 4
+        "date_created": "2022-08-05T16:40:39.266Z"
+        
       },
 
-    {
+    {   "user_id": 3,
         "description": "Chibbe might think that im a big javascript enthusiast however I secretly prefer python",
-        "date_created": "2022-08-22T16:40:39.266Z",
-        "user_id": 3
+        "date_created": "2022-08-22T16:40:39.266Z"
+        
 
     },
 
-    {
+    {   "user_id": 3,
         "description": "test",
-        "date_created": "2022-08-22T16:40:39.266Z",
-        "user_id": 3
+        "date_created": "2022-08-22T16:40:39.266Z"
+        
 
     }
 
