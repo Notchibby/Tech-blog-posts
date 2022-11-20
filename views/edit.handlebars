@@ -1,18 +1,20 @@
-  <form class="form login-form" id="signup">
+  <form class="form login-form" id="signup" data-id="{{id}}">
     <h2>Edit Post</h2>
 
     <div class="form-group " id="post-title-form">
       <label for="username-login">Title</label>
-      <input class="form-input" type="text" id="post-title" />
+      <input class="form-input" type="text" id="post-title" value="{{title}}" />
     </div>
     <div class="form-group" id="post-content-form">
-      <label for="password-login">Content</label>
-      <input class="form-input" type="password" id="post-content" />
+      <label for="password-login">Content:</label>
+      <input class="form-input" type="text" id="post-content" value="{{content}}"/>
     </div>
     <div class="form-group">
-      <button class="button" type="submit" id="update-button">Update</button>
+      <button class="button" type="submit" id="update-button">Update Post</button>
     </div>
     <div class="form-group">
       <button class="button" type="submit" id="delete-button">Delete</button>
     </div>
   </form>
+
+  <script src="./js/edit.js"></script>

@@ -68,11 +68,17 @@ router.get('/post', withAuth , (req, res) => {
 })
 
 router.get('/update/:id', withAuth , async (req, res) => {
-  // try {
-  //   const blogData = await Blog.findByPk()
-  // }
-
-  res.render('edit');
+  try {
+    const blogData = await Blog.findByPk(req.params.id)
+    const blog = blogData.get({plain: true})
+    console.log(blog)
+    res.render('edit', {
+      ...blog,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err)
+  } 
 })
 
 
