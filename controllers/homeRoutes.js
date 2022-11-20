@@ -67,7 +67,7 @@ router.get('/post', withAuth , (req, res) => {
   res.render('createnewpost');
 })
 
-router.get('/update/id:', withAuth , async (req, res) => {
+router.get('/update/:id', withAuth , async (req, res) => {
   // try {
   //   const blogData = await Blog.findByPk()
   // }
