@@ -84,9 +84,9 @@ router.get('/update/:id', withAuth , async (req, res) => {
 
 router.get('/blog/:id', withAuth , async (req, res) => {
   try {
-    const commentData = await Comment.findByPk(req.params.id, {
+    const commentData = await Blog.findByPk(req.params.id, {
       include: [{ 
-        model: Blog, include: [{model: User}] 
+        model: Comment, include: [{model: User}] 
       },], 
     })
     const comment = commentData.get({plain: true})
@@ -102,9 +102,9 @@ router.get('/blog/:id', withAuth , async (req, res) => {
 
 router.get('/comment/:id', withAuth , async (req, res) => {
   try {
-    const commentData = await Comment.findByPk(req.params.id, {
+    const commentData = await Blog.findByPk(req.params.id, {
       include: [{ 
-        model: Blog, include: [{model: User}] 
+        model: Comment, include: [{model: User}] 
       },], 
     })
     const comment = commentData.get({plain: true})

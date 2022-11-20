@@ -12,14 +12,14 @@
     "content": "There is a difference between authentication and authorization. Authentication means confirming your own identity whereas authorization means being allowed access to the system.",
     "date_created": "2022-08-05T16:40:39.266Z",
     "user_id": 1,
-    "comment_id": [2]
+    "comment_id": [3]
   },
   {
     "title": "Javascript vs Python",
     "content": "The undeniable truth is javascript is better than python for website development because of one simple reason and that is Js runs in the browser while python is a back-end language ",
     "date_created": "2022-08-20T16:40:39.266Z",
     "user_id": 2,
-    "comment_id": [3]
+    "comment_id": [2]
     
   }
 ]

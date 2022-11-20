@@ -13,13 +13,15 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+  for (const comment of commentData){
+    await Comment.create(comment);
+  }
+
   for (const blog of blogData) {
     await Blog.create(blog);
   }
 
-  for (const comment of commentData){
-    await Comment.create(comment);
-  }
+ 
 
   process.exit(0);
 };
