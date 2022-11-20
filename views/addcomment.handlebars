@@ -1,4 +1,4 @@
- <div class="blog-card">
+ <div class="blog-card" data-id=>
 
     <div class="card-title">
       <p class="title-content" id="title-content">{{blog.title}}</p>
@@ -20,10 +20,12 @@
 
     <div class="form-group " id="username-login">
       <label for="username-login">Comment</label>
-      <input class="form-input" type="text" id="comment" />
+      <input class="form-input" type="text"  id="comment"  />
     </div>
     
     <div class="form-group">
-      <button class="button" type="submit" id="button">Submit</button>
+      <button class="button" type="submit" id="button" data-id="{{blog_id}}">Submit</button>
     </div>
   </form>
+
+  <script src="/js/newcomment.js"></script>

@@ -26,6 +26,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+
 // Use withAuth middleware to prevent access to route
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
@@ -81,7 +82,7 @@ router.get('/update/:id', withAuth , async (req, res) => {
   } 
 })
 
-router.get('/comment/:id', withAuth , async (req, res) => {
+router.get('/blog/:id', withAuth , async (req, res) => {
   try {
     const commentData = await Comment.findByPk(req.params.id, {
       include: [{ 
@@ -98,6 +99,26 @@ router.get('/comment/:id', withAuth , async (req, res) => {
     res.status(500).json(err)
   } 
 })
+
+router.get('/comment/:id', withAuth , async (req, res) => {
+  try {
+    const commentData = await Comment.findByPk(req.params.id, {
+      include: [{ 
+        model: Blog, include: [{model: User}] 
+      },], 
+    })
+    const comment = commentData.get({plain: true})
+    console.log(comment)
+    res.render('addcomment', {
+      ...comment,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err)
+  } 
+})
+
+
 
 
 module.exports = router;
