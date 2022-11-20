@@ -176,10 +176,12 @@ main{
 
 .new-post-button{
   box-sizing: border-box;
-  margin: 20% 40% 0% 45% ;
+  position:fixed;
+  bottom: 1%;
+  left:50%;
   border: 1.5px solid   #282d2b;
-  width: fit-content;
-  padding: 0.5% 1.5% 0.5% 1.5%;
+  width: 8%;
+  height: 6%;
   background-color: #282d2b;
   border-radius: 10px;
   color: #d2f3ca;

@@ -62,4 +62,18 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 })
 
+router.get('/post', withAuth , (req, res) => {
+
+  res.render('createnewpost');
+})
+
+router.get('/update', withAuth , async (req, res) => {
+  // try {
+  //   const blogData = await Blog.findByPk()
+  // }
+
+  res.render('edit');
+})
+
+
 module.exports = router;
