@@ -20,13 +20,13 @@ The app can be started by typing in the command 'npm run watch' or 'node server.
 
 
 ## Screenshots
-![screenshot-of-the-application-with-a-call-to-get-all-products](https://github.com/Notchibby/E-commerce-ORM-server/blob/main/assets/images/get_all_products.png)
+![screenshot-of-the-application-to-add-comment](https://github.com/Notchibby/Tech-blog-posts/blob/main/assets/images/addcomment.png)
 
-![screenshot-of-the-application-with-a-call-to-product-NO-4](https://github.com/Notchibby/E-commerce-ORM-server/blob/main/assets/images/get_product_4.png)
+![screenshot-of-the-application-to-view-comments](https://github.com/Notchibby/Tech-blog-posts/blob/main/assets/images/comment.png)
 
-![screenshot-of-the-application-with-a-call-to-delete-NO-4](https://github.com/Notchibby/E-commerce-ORM-server/blob/main/assets/images/Delete_product_4.png)
+![screenshot-of-the-application-signup-page](https://github.com/Notchibby/Tech-blog-posts/blob/main/assets/images/signup.png)
 
-![screenshot-of-the-application-with-a-call-to-product-NO-4-after-deleting-product](https://github.com/Notchibby/E-commerce-ORM-server/blob/main/assets/images/Get_product_4_after_delete.png)
+![screenshot-of-the-application-homepage](https://github.com/Notchibby/Tech-blog-posts/blob/main/assets/images/homepage.png)
 
 
 ## Dependencies
