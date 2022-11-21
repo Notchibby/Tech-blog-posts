@@ -17,15 +17,14 @@ router.get('/', async (req, res) => {
     const blogs = blogData.map((blog) => blog.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      blogs, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      blogs,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
 
 // Use withAuth middleware to prevent access to route
 router.get('/dashboard', withAuth, async (req, res) => {
@@ -37,11 +36,10 @@ router.get('/dashboard', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-    
 
     res.render('dashboard', {
       ...user,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -59,64 +57,64 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/signup', (req, res) => {
-
   res.render('signup');
-})
+});
 
-router.get('/post', withAuth , (req, res) => {
-
+router.get('/post', withAuth, (req, res) => {
   res.render('createnewpost');
-})
+});
 
-router.get('/update/:id', withAuth , async (req, res) => {
+router.get('/update/:id', withAuth, async (req, res) => {
   try {
-    const blogData = await Blog.findByPk(req.params.id)
-    const blog = blogData.get({plain: true})
-    console.log(blog)
+    const blogData = await Blog.findByPk(req.params.id);
+    const blog = blogData.get({ plain: true });
+    console.log(blog);
     res.render('edit', {
       ...blog,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
-    res.status(500).json(err)
-  } 
-})
+    res.status(500).json(err);
+  }
+});
 
-router.get('/blog/:id', withAuth , async (req, res) => {
+router.get('/blog/:id', withAuth, async (req, res) => {
   try {
     const commentData = await Blog.findByPk(req.params.id, {
-      include: [{ model: Comment, include: [{model: User}]}, {model: User}], 
-    })
-    const comment = commentData.get({plain: true})
-    console.log(comment)
+      include: [
+        { model: Comment, include: [{ model: User }] },
+        { model: User },
+      ],
+    });
+    const comment = commentData.get({ plain: true });
+    console.log(comment);
     res.render('viewcomment', {
       ...comment,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
-    res.status(500).json(err)
-  } 
-})
+    res.status(500).json(err);
+  }
+});
 
-router.get('/comment/:id', withAuth , async (req, res) => {
+router.get('/comment/:id', withAuth, async (req, res) => {
   try {
-    const commentData = await Blog.findByPk(req.params.id, {
-      include: [{ 
-        model: User,
-        required: false
-      },], 
-    })
-    const comment = commentData.get({plain: true})
+    const blogData = await Blog.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          required: false,
+        },
+      ],
+    });
+    const blog = blogData.get({ plain: true });
     res.render('addcomment', {
-      ...comment,
-      logged_in: true
+      ...blog,
+      logged_in: true,
     });
   } catch (err) {
-    res.status(500).json(err)
-  } 
-})
-
-
-
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;

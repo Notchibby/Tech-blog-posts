@@ -15,18 +15,25 @@ Comment.init(
       type: DataTypes.STRING,
     },
     date_created: {
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: DataTypes.NOW,
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id',
-        }
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
       },
-   
+    },
+
+    blog_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'blog',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
