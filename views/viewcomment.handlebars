@@ -1,35 +1,24 @@
 <div class="blog-card">
 
     <div class="card-title">
-      <p class="title-content" id="title-content"></p>
+      <p class="title-content" id="title-content">{{title}}</p>
 
-      <p class="title-content">posted by  on </p>
+      <p class="title-content">posted by {{user.username}}  on {{format_date date_created}}</p>
 
     </div>
     
 
     <div class="card-body">
       <p>
-       
+       {{content}}
       </p>
     </div>
   </div>
 
-
-    <div class="comment-card">
-
-        <div class="comment-title">
-
-        </div>
+  {{#each comments}}
+  {{> commentcard}}
+  {{/each}}
 
 
-        <div class="comment-body">
-            <p id="comment-content">
-                
-            </p>
 
-            <p id="comment-tag">
-                -lorentino, 5/8/2020
-            </p>
-        </div>
-    </div>
+    
