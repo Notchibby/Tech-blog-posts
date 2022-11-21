@@ -48,7 +48,7 @@ My other applications can be viewed at my github repository located at https://g
 
 ## Deployment
 
-This application has been deployed at  
+This application has been deployed at https://chibbes-tech-blog-app.herokuapp.com/
 
 ## License
 Licenced under the [GNU GPLv3](https://www.gnu.org/licenses/agpl-3.0) license.
