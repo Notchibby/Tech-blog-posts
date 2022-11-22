@@ -8,17 +8,17 @@
       },
 
     {   "user_id": 3,
-        "description": "Chibbe might think that im a big javascript enthusiast however I secretly prefer python",
+        "description": "people might think that im a big javascript enthusiast however I secretly prefer python",
         "date_created": "2022-08-22T16:40:39.266Z",
-        "blog_id": 1
+        "blog_id": 3
         
 
     },
 
     {   "user_id": 3,
-        "description": "test",
+        "description": "Thank you for such a clear explaination",
         "date_created": "2022-08-22T16:40:39.266Z",
-        "blog_id": 1
+        "blog_id": 2
 
     }
 
